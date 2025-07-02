@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
-import { getAddTofavourite, getTheAddStoreList } from "../Utility/addToDb";
+import { getAddTofavourite, getTheAddStoreList, removeFromCart, removeFromfav } from "../Utility/addToDb";
 import AddCart from "../AddCart/AddCart";
 import AddToFav from "../AddToFav/AddToFav";
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
         const addToFav = mainData.filter(item => accessoriesDataFavStr.includes(item.id))
         setAddFav(addToFav)
     }, [mainData]);
-
+    
     return (
         <div>
             <div className="bg-[#9538E2]">
@@ -33,18 +33,42 @@ const Dashboard = () => {
                     <button onClick={() => setShowBtn('wishlist')} className={`btn py-[25px] px-[64px] font-extrabold text-[18px] rounded-3xl ${showBtn === 'wishlist' ? 'text-white bg-[#9538E2]' : 'bg-white text-[#9538E2]'}`}>WishList</button>
                 </div>
             </div>
-            
+
             <div>
-
+                <p className={`text-3xl font-bold text-center p-10 ${showBtn === 'cart' ? '' : 'hidden'}`}>Cart</p>
                 {showBtn === 'cart' &&
-
-                    (addCart.map(item => <AddCart key={item.id} item={item}></AddCart>))
+                        
+                    (addCart.map(item =>
+                        <AddCart
+                            key={item.id}
+                            item={item}
+                            onDelete = { ()=>{
+                                removeFromCart(item.id);
+                                const newData = getTheAddStoreList();
+                                const newDataStr = newData.map(id => parseInt(id));
+                                const updatedData = mainData.filter(item => newDataStr.includes(item.id));
+                                setAddCart(updatedData);
+                            }
+                            }
+                            ></AddCart>))
                 }
             </div>
             <div>
-
+                <p className={`text-3xl font-bold text-center p-10 ${showBtn === 'wishlist' ? '' : 'hidden'}`}>Wishlist</p>
                 {showBtn === 'wishlist' &&
-                    (addFav.map(item => <AddToFav key={item.id} item={item}></AddToFav>))
+                    (addFav.map(item => <AddToFav 
+                        key={item.id}
+                         item={item}
+                         onDelete = {
+                            ()=>{
+                                removeFromfav(item.id);
+                                const newData = getAddTofavourite();
+                                const newDataStr = newData.map(id => parseInt(id));
+                                const updatedData = mainData.filter(item => newDataStr.includes(item.id));
+                                setAddFav(updatedData);
+                            }
+                         }
+                         ></AddToFav>))
                 }
             </div>
 

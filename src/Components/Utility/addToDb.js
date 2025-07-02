@@ -11,6 +11,7 @@ const getTheAddStoreList = ()=>{
     }
 }
 
+
 const addToCart = (data)=>{
     const storedList = getTheAddStoreList();
     storedList.push(data);
@@ -63,6 +64,25 @@ const addToFavourite = (id)=>{
     }
 } 
 
+const removeFromCart = (id) => {
+    const storedListStr = localStorage.getItem('add-to-cart');
+    if (!storedListStr) return;
+
+    const storedList = JSON.parse(storedListStr);
+    // Keep only items NOT equal to the id we want to delete
+    const updatedList = storedList.filter(itemId => parseInt(itemId) !== id);
+    localStorage.setItem('add-to-cart', JSON.stringify(updatedList));
+};
+
+const removeFromfav = (id) => {
+    const storedListStr = localStorage.getItem('favourite');
+    if (!storedListStr) return;
+
+    const storedList = JSON.parse(storedListStr);
+    // Keep only items NOT equal to the id we want to delete
+    const updatedList = storedList.filter(itemId => parseInt(itemId) !== id);
+    localStorage.setItem('favourite', JSON.stringify(updatedList));
+};
   
 
-export {addToCart, addToFavourite, getTheAddStoreList, getAddTofavourite};
+export {addToCart, addToFavourite, getTheAddStoreList, getAddTofavourite , removeFromCart, removeFromfav};
