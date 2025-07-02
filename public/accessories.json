@@ -1,0 +1,384 @@
+[
+  {
+    "id": 1,
+    "category": "mobile",
+    "name": "iPhone 15 Pro",
+    "brand": "Apple",
+    "inStock" : true,
+    "price": 1299,
+    "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
+    "description": "Apple's flagship phone featuring the powerful A17 Pro chip, stunning Super Retina XDR display, and advanced camera system for professional photography.",
+    "specification": {
+      "display": "6.1-inch Super Retina XDR",
+      "processor": "A17 Pro chip",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "3274mAh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 2,
+    "category": "mobile",
+    "name": "Samsung Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "inStock" : true,
+    "price": 1199,
+    "image": "https://www.shutterstock.com/shutterstock/photos/2432265035/display_1500/stock-vector-realistic-vector-flat-samsung-galaxy-s-ultra-mockup-with-blank-screen-isolated-on-white-2432265035.jpg",
+    "description": "Samsung's premium smartphone with a dynamic AMOLED 2X display, S Pen support, and versatile quad-camera setup for exceptional photos and videos.",
+    "specification": {
+      "display": "6.8-inch Dynamic AMOLED 2X",
+      "processor": "Snapdragon 8 Gen 3",
+      "ram": "12GB",
+      "storage": "512GB",
+      "camera": "200MP + 12MP + 10MP + 10MP",
+      "battery": "5000mAh"
+    },
+    "rating":4.6
+  },
+  {
+    "id": 3,
+    "category": "mobile",
+    "name": "Google Pixel 8",
+    "brand": "Google",
+    "inStock" : false,
+    "price": 999,
+    "image": "https://www.dxomark.com/wp-content/uploads/medias/post-160143/Google-Pixel-8-featured-image-packshot-review-Recovered.jpg",
+    "description": "Google's Pixel 8 offers a pure Android experience, powerful AI-driven photography, and a smooth OLED display for an exceptional user experience.",
+    "specification": {
+      "display": "6.2-inch OLED",
+      "processor": "Google Tensor G3",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 12MP",
+      "battery": "4575mAh"
+    },
+    "rating":4.7
+  },
+  {
+    "id": 4,
+    "category": "mobile",
+    "name": "OnePlus 12",
+    "brand": "OnePlus",
+    "price": 799,
+    "inStock" : true,
+    "image": "https://image01.oneplus.net/media/202405/28/b96848b7acd10dafde32203d12f6fea7.png",
+    "description": "OnePlus 12 features blazing-fast performance, a vibrant AMOLED display, and Hasselblad-enhanced cameras for outstanding photos and videos.",
+    "specification": {
+      "display": "6.82-inch AMOLED, 120Hz",
+      "processor": "Snapdragon 8 Gen 3",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 48MP + 64MP",
+      "battery": "5400mAh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 5,
+    "category": "mobile",
+    "name": "Redmi Note 13",
+    "brand": "Xiaomi",
+    "inStock" : true,
+    "price": 249,
+    "image": "https://www.mobiledokan.com/media/1710078708cnQp7.webp",
+    "description": "An affordable smartphone with a large display, solid performance, and impressive battery life, perfect for everyday use.",
+    "specification": {
+      "display": "6.67-inch AMOLED",
+      "processor": "Dimensity 6080",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "108MP + 2MP",
+      "battery": "5000mAh"
+    },
+    "rating":4.9
+  },
+  {
+    "id": 6,
+    "category": "mobile",
+    "name": "Realme GT 6",
+    "brand": "Realme",
+    "inStock" : false,
+    "price": 499,
+    "image": "https://www.mobiledokan.com/media/realme-gt-6-razor-green-official-image.webp",
+    "description": "Realme GT 6 offers flagship-level performance with a high-refresh-rate display, fast charging, and a stylish design.",
+    "specification": {
+      "display": "6.74-inch AMOLED, 144Hz",
+      "processor": "Snapdragon 8s Gen 3",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5500mAh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 7,
+    "category": "mobile",
+    "name": "Motorola Edge 50",
+    "brand": "Motorola",
+    "inStock" : false,
+    "price": 599,
+    "image": "https://www.mobiledokan.co/wp-content/uploads/2024/03/Motorola-Edge-50-Jungle-Green.webp",
+    "description": "Motorola Edge 50 comes with an edge-to-edge display, versatile camera setup, and strong battery performance for a smooth daily experience.",
+    "specification": {
+      "display": "6.55-inch OLED, 144Hz",
+      "processor": "Snapdragon 7 Gen 3",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 13MP + 2MP",
+      "battery": "4400mAh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 8,
+    "category": "laptop",
+    "name": "MacBook Pro 14",
+    "brand": "Apple",
+    "inStock" : true,
+    "price": 1999,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQIMgDnY4olsh6VyMkL4xmi5NCHJ7h8oxmw&s",
+    "description": "A powerhouse laptop with Apple's M3 Pro chip, Liquid Retina XDR display, and long battery life, ideal for creative professionals.",
+    "specification": {
+      "display": "14.2-inch Liquid Retina XDR",
+      "processor": "Apple M3 Pro",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "graphics": "Integrated 14-core GPU",
+      "battery": "Up to 18 hours"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 9,
+    "category": "laptop",
+    "name": "Dell XPS 15",
+    "brand": "Dell",
+    "inStock" : true,
+    "price": 1799,
+    "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/media-gallery/touch-black/notebook-xps-15-9530-t-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3778&hei=2323&qlt=100,1&resMode=sharp2&size=3778,2323&chrss=full&imwidth=5000",
+    "description": "Dell's premium ultrabook featuring a vivid OLED display, high-end Intel processors, and an elegant design perfect for professionals and creators.",
+    "specification": {
+      "display": "15.6-inch OLED 3.5K",
+      "processor": "Intel Core i7-13700H",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 4050",
+      "battery": "86Wh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 10,
+    "category": "laptop",
+    "name": "HP Spectre x360",
+    "brand": "HP",
+    "inStock" : true,
+    "price": 1599,
+    "image": "https://www.digitaltrends.com/wp-content/uploads/2020/12/hp-spectre-1.jpg?p=1",
+    "description": "A stylish 2-in-1 convertible laptop with a sleek design, vibrant touchscreen, and long-lasting battery life for flexible productivity.",
+    "specification": {
+      "display": "13.5-inch OLED touch",
+      "processor": "Intel Core i7-1355U",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "graphics": "Intel Iris Xe",
+      "battery": "Up to 17 hours"
+    },
+    "rating":4.7
+  },
+  {
+    "id": 11,
+    "category": "laptop",
+    "name": "Lenovo Yoga 9i",
+    "brand": "Lenovo",
+    "inStock" : false,
+    "price": 1499,
+    "image": "https://www.globalbrand.com.bd/image/cache/catalog/LAPTOP/LENOVO/Lenovo-YOGA-9i-2-in-1-(9)-(83AC003NLK)-Core-Ultra-7-155H-(M14)-Touch-Laptop-2-320x320.jpg",
+    "description": "Lenovo Yoga 9i offers premium build quality, a 2-in-1 convertible design, and immersive sound with its rotating soundbar speakers.",
+    "specification": {
+      "display": "14-inch 2.8K OLED",
+      "processor": "Intel Core Ultra 7 155H",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "graphics": "Intel Arc",
+      "battery": "Up to 15 hours"
+    },
+    "rating":4.9
+  },
+  {
+    "id": 12,
+    "category": "laptop",
+    "name": "Asus ROG Zephyrus G14",
+    "brand": "Asus",
+    "inStock" : true,
+    "price": 1899,
+    "image": "https://computermania.com.bd/wp-content/uploads/2025/01/Asus-ROG-Zephyrus-1-7.jpg",
+    "description": "A compact gaming laptop boasting powerful AMD processors, RTX graphics, and a high-refresh-rate display for serious gaming on the go.",
+    "specification": {
+      "display": "14-inch QHD+ 165Hz",
+      "processor": "AMD Ryzen 9 8945HS",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 4060",
+      "battery": "76Wh"
+    },
+    "rating":4.2
+  },
+  {
+    "id": 13,
+    "category": "laptop",
+    "name": "MSI Stealth 16",
+    "brand": "MSI",
+    "inStock" : true,
+    "price": 1699,
+    "image": "https://computermania.com.bd/wp-content/uploads/2025/01/Msi-Stealth-3.jpg",
+    "description": "A slim, high-performance gaming laptop featuring advanced cooling, powerful GPUs, and elegant design suitable for both work and play.",
+    "specification": {
+      "display": "16-inch QHD+ 240Hz",
+      "processor": "Intel Core i9-13900H",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 4070",
+      "battery": "99.9Wh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 14,
+    "category": "laptop",
+    "name": "Acer Swift X",
+    "brand": "Acer",
+    "inStock" : true,
+    "price": 999,
+    "image": "https://m.media-amazon.com/images/I/71d5rAq4YaL._AC_SL1500_.jpg",
+    "description": "Acer Swift X combines lightweight portability with powerful hardware, making it perfect for creators and professionals on the move.",
+    "specification": {
+      "display": "14-inch Full HD IPS",
+      "processor": "AMD Ryzen 7 5800U",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "graphics": "NVIDIA RTX 3050 Ti",
+      "battery": "59Wh"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 15,
+    "category": "accessory",
+    "name": "Logitech MX Master 3",
+    "brand": "Logitech",
+    "inStock" : false,
+    "price": 99,
+    "image": "https://mcsolution.com.bd/wp-content/uploads/2022/09/MX-MASTER-3S-pale-gray-MC-Solution-BD-3.webp",
+    "description": "A premium wireless mouse with ergonomic design, customizable buttons, and ultra-precise scrolling for maximum productivity.",
+    "specification": {
+      "connectivity": "Bluetooth/USB Receiver",
+      "dpi": "4000 DPI",
+      "battery": "Up to 70 days",
+      "features": "Customizable buttons, ergonomic design"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 16,
+    "category": "accessory",
+    "name": "Apple AirPods Pro 2",
+    "brand": "Apple",
+    "inStock" : false,
+    "price": 249,
+    "image": "https://img.drz.lazcdn.com/static/bd/p/554d8c32b91c655f02b4af864b76a4a7.jpg_720x720q80.jpg",
+    "description": "Apple's latest noise-cancelling earbuds with Adaptive Transparency, personalized spatial audio, and exceptional comfort for daily use.",
+    "specification": {
+      "connectivity": "Bluetooth 5.3",
+      "battery": "Up to 6 hours (buds), 30 hours (case)",
+      "features": "Active Noise Cancellation, Spatial Audio"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 17,
+    "category": "accessory",
+    "name": "Samsung T7 SSD 1TB",
+    "brand": "Samsung",
+    "inStock" : true,
+    "price": 129,
+    "image": "https://www.ultratech.com.bd/image/cache/catalog/ssd/samsung/t7-1tb/samsung-t7-1tb-usb-32-type-c-portable-ssd-2-500x500.jpg",
+    "description": "A fast and portable SSD offering high-speed transfers, durable build quality, and compact size for easy data storage and backup.",
+    "specification": {
+      "capacity": "1TB",
+      "interface": "USB 3.2 Gen 2 Type-C",
+      "read_speed": "Up to 1050 MB/s",
+      "write_speed": "Up to 1000 MB/s"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 18,
+    "category": "accessory",
+    "name": "Sony WH-1000XM5",
+    "brand": "Sony",
+    "inStock" : true,
+    "price": 399,
+    "image": "https://assets.entrepreneur.com/content/3x2/2000/1717744762-Sonyheadphonescolors.jpg",
+    "description": "Industry-leading noise-cancelling headphones with crystal-clear sound, long battery life, and superb comfort for immersive listening.",
+    "specification": {
+      "connectivity": "Bluetooth 5.2",
+      "battery": "Up to 30 hours",
+      "features": "Active Noise Cancelling, Multipoint connection"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 19,
+    "category": "accessory",
+    "name": "Anker PowerCore 10000",
+    "brand": "Anker",
+    "inStock" : true,
+    "price": 39,
+    "image": "https://gadgetbreeze.com.bd/wp-content/uploads/2023/03/Anker-PowerCore-10000-PD-Redux-Power-Bank-430x430.jpg",
+    "description": "A compact and lightweight power bank delivering fast charging and enough capacity to keep your devices powered all day.",
+    "specification": {
+      "capacity": "10000mAh",
+      "output_ports": "USB-A, USB-C",
+      "max_output": "18W",
+      "features": "Fast Charging, Compact Size"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 20,
+    "category": "accessory",
+    "name": "Razer Kraken V3",
+    "brand": "Razer",
+    "inStock" : true,
+    "price": 129,
+    "image": "https://selltech.com.bd/image/cache/catalog/7200.jpg-550x550.jpg.webp",
+    "description": "A gaming headset offering immersive 7.1 surround sound, plush cushions, and RGB lighting for an engaging gaming experience.",
+    "specification": {
+      "connectivity": "USB",
+      "driver_size": "50mm",
+      "features": "THX Spatial Audio, RGB Chroma lighting",
+      "microphone": "Detachable HyperClear Cardioid Mic"
+    },
+    "rating":4.5
+  },
+  {
+    "id": 21,
+    "category": "accessory",
+    "name": "Baseus USB‑C Hub",
+    "brand": "Baseus",
+    "inStock" : true,
+    "price": 45,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3iQfyv9wHO__L2k0JcQ1cnDOqnjdENexgw&s",
+    "description": "A versatile USB-C hub providing multiple ports including HDMI, USB-A, and SD card slots for expanding your laptop’s connectivity.",
+    "specification": {
+      "ports": "HDMI, 3x USB-A, SD, MicroSD, USB-C Power Delivery",
+      "max_hdmi_output": "4K@60Hz",
+      "features": "Plug-and-Play, Compact design"
+    },
+    "rating":4.5
+  }
+]
