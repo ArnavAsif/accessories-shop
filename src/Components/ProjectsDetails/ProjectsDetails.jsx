@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
+import { addToCart, addToFavourite } from "../Utility/addToDb";
 
 const ProjectsDetails = () => {
     const { gadgetId } = useParams();
@@ -8,6 +9,13 @@ const ProjectsDetails = () => {
     const data = useLoaderData();
     const allData = data.find(item => item.id === id)
     const { name, price, inStock, description, rating, image } = allData;
+    const handleAddToCart = (id)=>{
+        addToCart(id)
+    }
+    const handleFavourite = (id)=>{
+        addToFavourite(id)
+    }
+
     return (
         <div>
             <div className="h-[335px] bg-[#9538E2] rounded-b-2xl">
@@ -35,7 +43,7 @@ const ProjectsDetails = () => {
                         <h5 className="font-bold text-[#09080F] text-[18px] mb-3">Specification:</h5>
                         <ol className="text-[#09080F] opacity-60 text-[18px]">
                             {
-                                Object.entries(allData.specification).map(item => <li>{item}</li>)
+                                Object.entries(allData.specification).map((item , index) => <li key={index}>{item}</li>)
                             }
                         </ol>
                     </div>
@@ -48,8 +56,8 @@ const ProjectsDetails = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                     </div>
                     <div className="">
-                        <button className="btn btn-primary mr-4">Add to Cart<FaCartShopping /> </button>
-                        <button className="btn btn-ghost btn-circle border-2 border-fuchsia-500 rounded-full p-4">
+                        <button onClick={()=> handleAddToCart(gadgetId)} className="btn btn-primary mr-4">Add to Cart<FaCartShopping /> </button>
+                        <button onClick={()=> handleFavourite(gadgetId)} className="btn btn-ghost btn-circle border-2 border-fuchsia-500 rounded-full p-4">
                             <div className="indicator">
                                 <CiHeart className="w-5 h-5"></CiHeart>
                             </div>

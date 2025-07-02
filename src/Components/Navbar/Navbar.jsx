@@ -7,9 +7,9 @@ const Navbar = () => {
     const isHome = location.pathname === '/';
 
     const NavList = <>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/' className={({isActive}) => (isActive ? '': '')}>Home</NavLink></li>
         <li><a>Statistics</a></li>
-        <li><a>Dashboard</a></li>
+        <li><NavLink to='/dashboard' className={({isActive}) => (isActive ? 'text-[#9538E2]': '')}>Dashboard</NavLink></li>
         
     </>
     return (
