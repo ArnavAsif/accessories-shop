@@ -10,6 +10,7 @@ import Root from './Components/Root/Root.jsx';
 import Banner from './Components/Banner/Banner.jsx';
 import ProjectsDetails from './Components/ProjectsDetails/ProjectsDetails.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
+import { ToastContainer} from 'react-toastify';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        loader: ()=> fetch('/accessories.json')
       }
     ]
   },
@@ -35,5 +37,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>,
 )

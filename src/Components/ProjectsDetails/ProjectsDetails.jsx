@@ -2,6 +2,8 @@ import { useLoaderData, useParams } from "react-router";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { addToCart, addToFavourite } from "../Utility/addToDb";
+import { Bounce, toast } from "react-toastify";
+
 
 const ProjectsDetails = () => {
     const { gadgetId } = useParams();
@@ -9,11 +11,31 @@ const ProjectsDetails = () => {
     const data = useLoaderData();
     const allData = data.find(item => item.id === id)
     const { name, price, inStock, description, rating, image } = allData;
-    const handleAddToCart = (id)=>{
-        addToCart(id)
+    const handleAddToCart = (id) => {
+        addToCart(id);
+        toast.success('ADD TO CART', {
+            position: "top-center",
+            autoClose: 5000,
+            theme: "light",
+            transition: Bounce,
+        });
     }
-    const handleFavourite = (id)=>{
-        addToFavourite(id)
+    const handleFavourite = (id) => {
+        addToFavourite(id);
+        toast('Added to Favourite ❤', {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+
+        
+
     }
 
     return (
@@ -43,7 +65,7 @@ const ProjectsDetails = () => {
                         <h5 className="font-bold text-[#09080F] text-[18px] mb-3">Specification:</h5>
                         <ol className="text-[#09080F] opacity-60 text-[18px]">
                             {
-                                Object.entries(allData.specification).map((item , index) => <li key={index}>{item}</li>)
+                                Object.entries(allData.specification).map((item, index) => <li key={index}>{item}</li>)
                             }
                         </ol>
                     </div>
@@ -56,8 +78,8 @@ const ProjectsDetails = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                     </div>
                     <div className="">
-                        <button onClick={()=> handleAddToCart(gadgetId)} className="btn btn-primary mr-4">Add to Cart<FaCartShopping /> </button>
-                        <button onClick={()=> handleFavourite(gadgetId)} className="btn btn-ghost btn-circle border-2 border-fuchsia-500 rounded-full p-4">
+                        <button onClick={() => handleAddToCart(gadgetId)} className="btn btn-primary mr-4">Add to Cart<FaCartShopping /> </button>
+                        <button onClick={() => handleFavourite(gadgetId)} className="btn btn-ghost btn-circle border-2 border-fuchsia-500 rounded-full p-4">
                             <div className="indicator">
                                 <CiHeart className="w-5 h-5"></CiHeart>
                             </div>

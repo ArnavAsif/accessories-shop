@@ -31,7 +31,7 @@ const getAddTofavourite = ()=>{
 const addToFavourite = (id)=>{
     const addedFavourite = getAddTofavourite();
     if(addedFavourite.includes(id)){
-        alert('Already on the favourite list')
+        console.log();
     }
     else{
         addedFavourite.push(id);
@@ -40,4 +40,6 @@ const addToFavourite = (id)=>{
     }
 } 
 
-export {addToCart, addToFavourite};
+  
+
+export {addToCart, addToFavourite, getTheAddStoreList};
