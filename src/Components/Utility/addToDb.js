@@ -1,3 +1,5 @@
+import { Bounce, toast } from "react-toastify";
+
 const getTheAddStoreList = ()=>{
     const storeListStr = localStorage.getItem('add-to-cart');
     if(storeListStr){
@@ -31,15 +33,36 @@ const getAddTofavourite = ()=>{
 const addToFavourite = (id)=>{
     const addedFavourite = getAddTofavourite();
     if(addedFavourite.includes(id)){
-        console.log();
+        toast('Already Exists ❤', {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        })
     }
     else{
         addedFavourite.push(id);
         const addedFavouriteStr = JSON.stringify(addedFavourite);
         localStorage.setItem('favourite', addedFavouriteStr);
+        toast('Added to Favourite ❤', {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        })
     }
 } 
 
   
 
-export {addToCart, addToFavourite, getTheAddStoreList};
+export {addToCart, addToFavourite, getTheAddStoreList, getAddTofavourite};

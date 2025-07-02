@@ -21,11 +21,11 @@ const AllGadgets = () => {
 
             <div className="flex mx-auto">
                 <div className="w-2/11 h-full flex flex-col sticky top-18 gap-10 p-8">
-                    <button onClick={() => setShowCategory('all')} className="btn btn-outline">All</button>
-                    <button onClick={() => setShowCategory('laptop')} className="btn btn-outline btn-primary">Laptop</button>
-                    <button onClick={() => setShowCategory('mobile')} className="btn btn-outline btn-secondary">Mobile</button>
-                    <button onClick={() => setShowCategory('accessory')} className="btn btn-outline btn-accent">Accessories</button>
-                    <button onClick={() => setShowCategory('smart-watch')} className="btn btn-outline btn-info">Smart Watch</button>
+                    <button onClick={() => setShowCategory('all')} className={`btn btn-outline ${showCategory === 'all' ? 'btn-active': ''}`}>All</button>
+                    <button onClick={() => setShowCategory('laptop')} className={`btn btn-outline btn-primary ${showCategory === 'laptop' ? 'btn-active':''}`}>Laptop</button>
+                    <button onClick={() => setShowCategory('mobile')} className={`btn btn-outline btn-secondary ${showCategory === 'mobile'? 'btn-active' : ''}`}>Mobile</button>
+                    <button onClick={() => setShowCategory('accessory')} className={`btn btn-outline btn-accent ${showCategory === 'accessories'? 'btn-active': ''}`}>Accessories</button>
+                    <button onClick={() => setShowCategory('smart-watch')} className={`btn btn-outline btn-info ${showCategory === 'smart-watch' ? 'btn-active' : ''}`}>Smart Watch</button>
                 </div>
                 <div className="grid grid-cols-3 gap-10 w-9/11">
 
