@@ -21,7 +21,7 @@ const AllGadgets = () => {
 
             <div className="flex mx-auto">
                 <div className="w-2/11 h-full flex flex-col sticky top-18 gap-10 p-8">
-                    <button onClick={() => setShowCategory('all')} className={`btn btn-outline ${showCategory === 'all' ? 'btn-active': ''}`}>All</button>
+                    <button onClick={() => setShowCategory('all')} className={`btn btn-outline ${showCategory === 'all' ? 'btn-active bg-amber-300': ''}`}>All</button>
                     <button onClick={() => setShowCategory('laptop')} className={`btn btn-outline btn-primary ${showCategory === 'laptop' ? 'btn-active':''}`}>Laptop</button>
                     <button onClick={() => setShowCategory('mobile')} className={`btn btn-outline btn-secondary ${showCategory === 'mobile'? 'btn-active' : ''}`}>Mobile</button>
                     <button onClick={() => setShowCategory('accessory')} className={`btn btn-outline btn-accent ${showCategory === 'accessories'? 'btn-active': ''}`}>Accessories</button>

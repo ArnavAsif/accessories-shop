@@ -29,8 +29,8 @@ const Dashboard = () => {
                 <h2 className="font-bold text-[32px] text-white text-center pt-8 mb-4">Dashboard</h2>
                 <p className="text-white text-center">Explore the latest gadgets that will take your experience to the next level. From smart devices to <br /> the coolest accessories, we have it all!</p>
                 <div className="flex gap-6 justify-center items-center mt-8 pb-8">
-                    <button onClick={() => setShowBtn('cart')} className={`btn py-[25px] px-[64px]  font-extrabold text-[18px] rounded-3xl ${showBtn === 'cart' ? 'text-white bg-[#9538E2]' : 'bg-white text-[#9538E2]'}`}>Cart</button>
-                    <button onClick={() => setShowBtn('wishlist')} className={`btn py-[25px] px-[64px] font-extrabold text-[18px] rounded-3xl ${showBtn === 'wishlist' ? 'text-white bg-[#9538E2]' : 'bg-white text-[#9538E2]'}`}>WishList</button>
+                    <button onClick={() => setShowBtn('cart')} className={`btn py-[25px] px-[64px]  font-extrabold text-[18px] rounded-3xl ${showBtn === 'cart' ? 'bg-white text-[#9538E2]' : 'text-white bg-[#9538E2]'}`}>Cart</button>
+                    <button onClick={() => setShowBtn('wishlist')} className={`btn py-[25px] px-[64px] font-extrabold text-[18px] rounded-3xl ${showBtn === 'wishlist' ? 'bg-white text-[#9538E2]' : 'text-white bg-[#9538E2]'}`}>WishList</button>
                 </div>
             </div>
 

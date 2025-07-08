@@ -11,6 +11,7 @@ import Banner from './Components/Banner/Banner.jsx';
 import ProjectsDetails from './Components/ProjectsDetails/ProjectsDetails.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import { ToastContainer} from 'react-toastify';
+import Statistics from './Components/Statistics/Statistics.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard></Dashboard>,
+        loader: ()=> fetch('/accessories.json')
+      },
+      {
+        path: '/statistics',
+        element: <Statistics></Statistics>,
         loader: ()=> fetch('/accessories.json')
       }
     ]

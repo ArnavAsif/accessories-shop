@@ -2,7 +2,7 @@ import BannerPic from '../../assets/banner.jpg'
 import AllGadgets from '../AllGadgets/AllGadgets';
 const Banner = () => {
     return (
-
+        
         <div className='mb-16'>
             <div>
                 <div className="bg-[#9538E2] rounded-b-2xl pt-6 h-[694px]">
