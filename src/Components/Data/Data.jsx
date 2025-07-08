@@ -6,7 +6,7 @@ const Data = ({ data }) => {
     return (
         <div className="card bg-base-100 w-96 shadow-sm">
             <figure >
-                <img className=" h-[282px] object-cover"
+                <img className=" scale-100 h-[282px] object-cover transition delay-150 duration-300 ease-in-out hover:scale-105"
                     src={image }
                     alt="Shoes" />
             </figure>

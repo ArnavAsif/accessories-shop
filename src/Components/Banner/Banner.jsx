@@ -13,7 +13,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className='flex justify-center md:-mt-[300px]'>
-                    <img className='md:h-[563px] md:w-[1062px] p-4 border-2 border-gray-200 rounded-[32px] object-cover' src={BannerPic} alt="" />
+                    <img className='md:h-[563px] md:w-[1062px] p-4 border-2 border-gray-200 rounded-[32px] object-cover transition animate-[bounce_7s_ease-in_infinite]' src={BannerPic} alt="" />
                 </div>
             </div>
             <div className='mt-20'>
