@@ -65,12 +65,27 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+
+
+
                 {
                     user ?
                         <>
-                            <button className="btn btn-ghost btn-circle"><img className="w-6 h-6 rounded-full" src={user.photoURL} alt="" /></button>
+                            <div className="dropdown dropdown-center">
+                                <div tabIndex={0} role="button" className="btn rounded-full btn-ghost btn-circle"><img className="w-6 h-6 rounded-full" src={user.photoURL} alt="" /></div>
+                                <div
+                                    tabIndex={0}
+                                    className="dropdown-content card bg-gray-300 z-1 w-64 shadow-md">
+                                    <div className="card-body flex justify-center items-center gap-5">
+                                        <img className="w-15 h-15 rounded-full" src={user.photoURL} alt="" />
+                                        <p className="text-black ">{user.displayName}</p>
+                                        <p className="text-black ">{user.email}</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                        </> : 
+
+                        </> :
                         <>
                             <button className="btn btn-ghost btn-circle"><img className="w-6 h-6 rounded-full" src={defaultImg} alt="" /></button>
 
@@ -78,14 +93,18 @@ const Navbar = () => {
 
                 }
 
-                <button className="btn btn-ghost btn-circle">
-                    <MdOutlineShoppingCart className="w-5 h-5"></MdOutlineShoppingCart>
-                </button>
-                <button className="btn btn-ghost btn-circle">
-                    <div className="indicator">
-                        <CiHeart className="w-5 h-5"></CiHeart>
-                    </div>
-                </button>
+                <NavLink to='/dashboard'>
+                    <button className="btn btn-ghost btn-circle">
+                        <MdOutlineShoppingCart className="w-5 h-5"></MdOutlineShoppingCart>
+                    </button>
+                </NavLink>
+                <NavLink to='/dashboard'>
+                    <button className="btn btn-ghost btn-circle">
+                        <div className="indicator">
+                            <CiHeart className="w-5 h-5"></CiHeart>
+                        </div>
+                    </button>
+                </NavLink>
 
 
                 {
