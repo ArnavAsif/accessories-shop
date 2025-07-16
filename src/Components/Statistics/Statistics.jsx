@@ -1,22 +1,34 @@
-import { useLoaderData } from "react-router";
+import { useEffect, useState } from 'react';
+import { LineChart, Line, XAxis, YAxis, Legend, Tooltip } from 'recharts';
+
 
 const Statistics = () => {
-    const statData = useLoaderData();
-    console.log(statData)
+    const [productPrice, setProductPrice] = useState([])
+    console.log(productPrice)
+    useEffect(() => {
+        fetch('./accessories.json')
+            .then(res => res.json())
+            .then(data => setProductPrice(data))
+    }, [])
+    
+    // const mathMarks = [
+    //     { id: 1, name: "Rahim", math: 85 },
+    //     { id: 2, name: "Karim", math: 72 },
+    //     { id: 3, name: "Ayesha", math: 90 },
+    //     { id: 4, name: "Tanvir", math: 60 },
+    //     { id: 5, name: "Nadia", math: 88 },
+    // ];
+
+
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
-            <figure>
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
+        <div className="mx-auto w-8/12 p-30">
+            <LineChart width={1200} height={300} data={productPrice} >
+                <Line type='monotone' dataKey='price' />
+                <XAxis dataKey='name'></XAxis>
+                <YAxis width='auto'></YAxis>
+                <Legend></Legend>
+                <Tooltip></Tooltip>
+            </LineChart>
         </div>
     )
 };

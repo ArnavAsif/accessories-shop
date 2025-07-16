@@ -12,6 +12,8 @@ import ProjectsDetails from './Components/ProjectsDetails/ProjectsDetails.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import { ToastContainer} from 'react-toastify';
 import Statistics from './Components/Statistics/Statistics.jsx';
+import SignUp from './Components/SignUp/SignUp.jsx';
+import Login from './Components/LogIn/Login.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,7 +36,14 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         element: <Statistics></Statistics>,
-        loader: ()=> fetch('/accessories.json')
+      },
+      {
+        path: '/logIn',
+        element: <Login></Login>
+      },
+      {
+        path: 'signUp',
+        element: <SignUp></SignUp>
       }
     ]
   },

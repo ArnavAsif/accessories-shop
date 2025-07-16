@@ -1,18 +1,30 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
-import { Link, NavLink, useLocation } from "react-router";
-import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import { NavLink, useLocation, Link } from "react-router";
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../Utility/firebase.init";
 import { useState } from "react";
 import defaultImg from "../../assets/default.webp"
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
     // Google Login start
     const [user, setUser] = useState([null])
     const googleProvider = new GoogleAuthProvider();
-
+    const gitHubProvider = new GithubAuthProvider();
     const handleGoogleLogin = () => {
         signInWithPopup(auth, googleProvider)
+            .then(result => {
+                // console.log(result.user)
+                setUser(result.user)
+            })
+            .catch(error => {
+                console.log(error)
+                setUser(null)
+            })
+    }
+    const handleGitHubLogin = () => {
+        signInWithPopup(auth, gitHubProvider)
             .then(result => {
                 console.log(result.user)
                 setUser(result.user)
@@ -57,7 +69,7 @@ const Navbar = () => {
                         {NavList}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+                <NavLink className="btn btn-ghost text-xl">Gadget Heaven</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -109,8 +121,14 @@ const Navbar = () => {
 
                 {
                     user ? <button onClick={handleGoogleSignOut} className="btn btn-accent">Sign Out</button> :
-                        <button onClick={handleGoogleLogin} className="btn btn-accent">Login</button>
+                        <>
+                            <button onClick={handleGoogleLogin} className="btn btn-ghost btn-circle"><FaGoogle /></button>
+                            <button onClick={handleGitHubLogin} className="btn btn-ghost btn-circle"><FaGithub /></button>
+                            <Link className="btn btn-accent" to='/logIn'><button>LogIn</button></Link>
+                            <Link className="btn btn-accent" to='/signUp'><button>Sign Up</button></Link>
+                        </>
                 }
+                
 
             </div>
         </div>
