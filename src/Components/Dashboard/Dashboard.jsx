@@ -3,7 +3,7 @@ import { useLoaderData, useNavigate } from "react-router";
 import { getAddTofavourite, getTheAddStoreList, removeFromCart, removeFromfav } from "../Utility/addToDb";
 import AddCart from "../AddCart/AddCart";
 import AddToFav from "../AddToFav/AddToFav";
-import { toast } from "react-toastify";
+
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ const Dashboard = () => {
             <div>
                 <div className="flex justify-between">
                     <p className={`text-3xl font-bold text-center p-10 ${showBtn === 'cart' ? '' : 'hidden'}`}>Cart</p>
-                    <div className="flex items-center gap-3">
+                    <div className={`flex items-center gap-3 ${showBtn === 'cart' ? '' : 'hidden'}`}>
                         <p className="font-bold text-xl text-black">Total Cost: ${totalPrice.toFixed(2)}</p>
                         <button className="btn btn-outline btn-secondary rounded-2xl">Sort By Price</button>
                         <button
@@ -55,7 +55,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 {showModal && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-40">
                         <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-xl p-6 relative">
                             <h2 className="text-2xl font-bold mb-4 text-center text-[#9538E2]">Purchase Summary</h2>
 
@@ -80,7 +80,7 @@ const Dashboard = () => {
                                         setShowSuccessModal(true); // Show success modal
                                         setAddCart([]);
                                         
-                                        localStorage.removeItem("shopping-cart"); // clear localStorage or use your util
+                                        localStorage.removeItem("add-to-cart"); // clear localStorage or use your util
                                     }}
                                     className="btn btn-success"
                                 >
@@ -97,7 +97,7 @@ const Dashboard = () => {
                     </div>
                 )}
                 {showSuccessModal && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-40">
                         <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-md p-6 text-center relative">
                             <h2 className="text-3xl font-bold text-green-600 mb-4">🎉 Purchase Successful!</h2>
                             <p className="text-lg text-gray-700 mb-6">
